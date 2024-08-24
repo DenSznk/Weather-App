@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   buttonBlock: {
     marginTop: 20,
     flexDirection: 'row',
-    gap: 20,
+    gap: 10,
   },
 });
 
