@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: 'grey',
   },
   avatar: {
     borderRadius: 50,
