@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, TouchableOpacity, Text} from 'react-native';
 
 type UserBlockTypes = {
   img: string | undefined;
@@ -20,9 +20,12 @@ const userBlock = ({img, header, text, date}: UserBlockTypes) => {
     }
   };
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Image style={styles.avatar} source={{uri: getImageSource(img)}} />
-    </View>
+      <Text>{header}</Text>
+      <Text>{text}</Text>
+      <Text>{date}</Text>
+    </TouchableOpacity>
   );
 };
 
