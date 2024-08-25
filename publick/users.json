@@ -2,7 +2,8 @@
   {
     "id": 1,
     "user": "User1",
-    "image": "https://example.com/image1.jpg",
+    "userName": "SunnyDaze",
+    "image": "img/user1.jpg",
     "title": "Beautiful Sunset",
     "text": "I captured this amazing sunset yesterday!",
     "date": "2024-08-19",
@@ -12,7 +13,8 @@
   {
     "id": 2,
     "user": "User2",
-    "image": "https://example.com/image2.jpg",
+    "userName": "StarGazer",
+    "image": "img/user2.jpg",
     "title": "My New Pet",
     "text": "Meet my new puppy, isn't he cute?",
     "date": "2024-08-18",
@@ -22,7 +24,8 @@
   {
     "id": 3,
     "user": "User3",
-    "image": "https://example.com/image3.jpg",
+    "userName": "Wanderlust",
+    "image": "img/user3.jpg",
     "title": "Delicious Breakfast",
     "text": "Starting the day with a healthy breakfast.",
     "date": "2024-08-17",
@@ -32,7 +35,8 @@
   {
     "id": 4,
     "user": "User4",
-    "image": "https://example.com/image4.jpg",
+    "userName": "FoodieLover",
+    "image": "img/user4.jpg",
     "title": "Mountain Hike",
     "text": "Reached the top! The view was worth the hike.",
     "date": "2024-08-16",
@@ -42,7 +46,8 @@
   {
     "id": 5,
     "user": "User5",
-    "image": "https://example.com/image5.jpg",
+    "userName": "NatureLover",
+    "image": "img/user5.jpg",
     "title": "Book Recommendation",
     "text": "Just finished reading this amazing book.",
     "date": "2024-08-15",
@@ -52,7 +57,8 @@
   {
     "id": 6,
     "user": "User6",
-    "image": "https://example.com/image6.jpg",
+    "userName": "TechGeek",
+    "image": "img/user6.jpg",
     "title": "New Artwork",
     "text": "Here's a painting I recently completed.",
     "date": "2024-08-14",
@@ -62,7 +68,8 @@
   {
     "id": 7,
     "user": "User7",
-    "image": "https://example.com/image7.jpg",
+    "userName": "ArtistAtHeart",
+    "image": "img/user7.jpg",
     "title": "Coffee Break",
     "text": "Taking a quick break with some coffee.",
     "date": "2024-08-13",
@@ -72,7 +79,8 @@
   {
     "id": 8,
     "user": "User8",
-    "image": "https://example.com/image8.jpg",
+    "userName": "CityExplorer",
+    "image": "img/user8.jpg",
     "title": "City Lights",
     "text": "The city looks beautiful at night.",
     "date": "2024-08-12",
@@ -82,7 +90,8 @@
   {
     "id": 9,
     "user": "User9",
-    "image": "https://example.com/image9.jpg",
+    "userName": "BeachBum",
+    "image": "img/user9.jpg",
     "title": "Weekend Getaway",
     "text": "Had a relaxing weekend at the beach.",
     "date": "2024-08-11",
@@ -92,7 +101,8 @@
   {
     "id": 10,
     "user": "User10",
-    "image": "https://example.com/image10.jpg",
+    "userName": "MorningRunner",
+    "image": "img/user10.jpg",
     "title": "My Workout Routine",
     "text": "Sharing my daily workout routine.",
     "date": "2024-08-10",
@@ -102,7 +112,8 @@
   {
     "id": 11,
     "user": "User11",
-    "image": "https://example.com/image11.jpg",
+    "userName": "StarChaser",
+    "image": "img/user11.jpg",
     "title": "New Recipe",
     "text": "Tried out a new recipe today. Delicious!",
     "date": "2024-08-09",
@@ -112,7 +123,8 @@
   {
     "id": 12,
     "user": "User12",
-    "image": "https://example.com/image12.jpg",
+    "userName": "TrailBlazer",
+    "image": "img/user12.jpg",
     "title": "Morning Run",
     "text": "Enjoyed a refreshing morning run.",
     "date": "2024-08-08",
@@ -122,7 +134,8 @@
   {
     "id": 13,
     "user": "User13",
-    "image": "https://example.com/image13.jpg",
+    "userName": "ConcertFan",
+    "image": "img/user13.jpg",
     "title": "Concert Night",
     "text": "Had an amazing time at the concert!",
     "date": "2024-08-07",
@@ -132,7 +145,8 @@
   {
     "id": 14,
     "user": "User14",
-    "image": "https://example.com/image14.jpg",
+    "userName": "GreenThumb",
+    "image": "img/user14.jpg",
     "title": "Gardening Success",
     "text": "My garden is blooming beautifully.",
     "date": "2024-08-06",
@@ -142,7 +156,8 @@
   {
     "id": 15,
     "user": "User15",
-    "image": "https://example.com/image15.jpg",
+    "userName": "StarGazer",
+    "image": "img/user15.jpg",
     "title": "Camping Trip",
     "text": "Camping under the stars was so peaceful.",
     "date": "2024-08-05",
@@ -152,7 +167,8 @@
   {
     "id": 16,
     "user": "User16",
-    "image": "https://example.com/image16.jpg",
+    "userName": "GadgetGuy",
+    "image": "img/user16.jpg",
     "title": "New Gadget",
     "text": "Just got a new gadget. Super excited!",
     "date": "2024-08-04",
@@ -162,7 +178,8 @@
   {
     "id": 17,
     "user": "User17",
-    "image": "https://example.com/image17.jpg",
+    "userName": "PeacefulMind",
+    "image": "img/user17.jpg",
     "title": "Relaxing Day",
     "text": "Spent the day relaxing and unwinding.",
     "date": "2024-08-03",
@@ -172,7 +189,8 @@
   {
     "id": 18,
     "user": "User18",
-    "image": "https://example.com/image18.jpg",
+    "userName": "FamilyFirst",
+    "image": "img/user18.jpg",
     "title": "Family Time",
     "text": "Enjoying quality time with family.",
     "date": "2024-08-02",
@@ -182,7 +200,8 @@
   {
     "id": 19,
     "user": "User19",
-    "image": "https://example.com/image19.jpg",
+    "userName": "NightOwl",
+    "image": "img/user19.jpg",
     "title": "Night Sky",
     "text": "The night sky was stunning tonight.",
     "date": "2024-08-01",
@@ -192,7 +211,8 @@
   {
     "id": 20,
     "user": "User20",
-    "image": "https://example.com/image20.jpg",
+    "userName": "ChefInTraining",
+    "image": "img/user20.jpg",
     "title": "Cooking Class",
     "text": "Learned some great tips in today's cooking class.",
     "date": "2024-07-31",
@@ -201,8 +221,9 @@
   },
   {
     "id": 21,
-    "user": "User20",
-    "image": "https://example.com/image21.jpg",
+    "user": "User21",
+    "userName": "ComeBackKid",
+    "image": "img/user21.jpg",
     "title": "Hello Bitches, I'm back",
     "text": "Learned some great tips in today's cooking class.",
     "date": "2024-07-31",
@@ -212,7 +233,8 @@
   {
     "id": 22,
     "user": "User22",
-    "image": "https://example.com/image22.jpg",
+    "userName": "CoolChef",
+    "image": "img/user22.jpg",
     "title": "Nice cooc",
     "text": "Learned some great tips in today's cooking class.",
     "date": "2024-07-31",

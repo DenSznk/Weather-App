@@ -11,9 +11,10 @@ function HomeScreen() {
   const onCheckWeatherPress = () => navigation.navigate('UsersScreen');
   return (
     <View style={styles.homeView}>
-      <Text style={styles.homeText}>Home Screen</Text>
+      <Text style={styles.homeText}>Weather App</Text>
       <View style={styles.buttonBlock}>
         <MainButton
+
           onPress={onCheckWeatherPress}
           title="Go to check Weather"
           color="lightblue"

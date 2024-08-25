@@ -3,12 +3,13 @@ import {Image, StyleSheet, TouchableOpacity, Text} from 'react-native';
 
 type UserBlockTypes = {
   img: string | undefined;
+  userName: string;
   header: string;
   text: string;
   date: string;
 };
 
-const userBlock = ({img, header, text, date}: UserBlockTypes) => {
+const userBlock = ({img, header, text, date, userName}: UserBlockTypes) => {
   const getImageSource = (imgSource: string | undefined) => {
     try {
       imgSource
@@ -22,6 +23,7 @@ const userBlock = ({img, header, text, date}: UserBlockTypes) => {
   return (
     <TouchableOpacity style={styles.container}>
       <Image style={styles.avatar} source={{uri: getImageSource(img)}} />
+      <Text>{userName}</Text>
       <Text>{header}</Text>
       <Text>{text}</Text>
       <Text>{date}</Text>
