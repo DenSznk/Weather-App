@@ -1,18 +1,29 @@
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 type MainButtonProps = {
   title: string;
   onPress: () => void;
   color: string;
-  icon?: ReactNode
+  icon?: ReactNode;
 };
 
-const MainButton: React.FC<MainButtonProps> = ({title, onPress, color, icon}) => {
-  return <TouchableOpacity style={[styles.button, { backgroundColor: color }]} onPress={onPress}>
-      {icon && <View>{icon}</View>}
-    <Text style={styles.buttonText}>{title}</Text>
-  </TouchableOpacity>;
+const MainButton: React.FC<MainButtonProps> = ({
+  title,
+  onPress,
+  color,
+  icon,
+}) => {
+  return (
+    <TouchableOpacity
+      style={[styles.button, {backgroundColor: color}]}
+      onPress={onPress}>
+      <View style={styles.content}>
+        <Text style={styles.buttonText}>{title}</Text>
+        {icon && <View style={styles.iconContainer}>{icon}</View>}
+      </View>
+    </TouchableOpacity>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -26,6 +37,14 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontSize: 16,
+  },
+  content: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+  },
+  iconContainer: {
+    marginRight: 8,
   },
 });
 

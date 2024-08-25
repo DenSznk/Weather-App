@@ -4,7 +4,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import MainButton from '../../components/Buttons/MainButton/MainButton';
 import {HomeScreenNavigationProp} from '../../types/navigationTypes';
 import {useNavigation} from '@react-navigation/native';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
@@ -14,7 +14,7 @@ function HomeScreen() {
       <Text style={styles.homeText}>Weather App</Text>
       <View style={styles.buttonBlock}>
         <MainButton
-
+          icon={<Icon name="arrow-forward" size={20} color="white" />}
           onPress={onCheckWeatherPress}
           title="Go to check Weather"
           color="lightblue"
