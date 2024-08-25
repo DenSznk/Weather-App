@@ -7,6 +7,5 @@ type RootStackParamList = {
 };
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<
-  RootStackParamList,
-  'Home'
+  RootStackParamList
 >;
