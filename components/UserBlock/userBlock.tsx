@@ -1,9 +1,16 @@
 import React from 'react';
-import {Image, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  ImageSourcePropType,
+  View,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 type UserBlockTypes = {
-  img: string | undefined;
+  img: ImageSourcePropType | undefined;
   userName: string;
   header: string;
   text: string;
@@ -12,7 +19,7 @@ type UserBlockTypes = {
   dislike: number;
 };
 
-const userBlock = ({
+const UserBlock = ({
   img,
   header,
   text,
@@ -21,31 +28,23 @@ const userBlock = ({
   like,
   dislike,
 }: UserBlockTypes) => {
-
   const shortText = (textInput: string) => {
-   return textInput.length > 40 ? textInput.slice(0, 39) + '...' : textInput;
+    return textInput.length > 40 ? textInput.slice(0, 39) + '...' : textInput;
   };
-  const getImageSource = (imgSource: string | undefined) => {
-    try {
-      imgSource
-        ? require(`../../../${imgSource}`)
-        : require('../../../public/img/default.jpg');
-    } catch (error) {
-      console.error(`Image not found ${imgSource}`);
-      return require('../../../public/img/default.jpg');
-    }
-  };
+
   return (
     <TouchableOpacity style={styles.container}>
-      <Image style={styles.avatar} source={{uri: getImageSource(img)}} />
-      <Text>{userName}</Text>
+      <View style={styles.top}>
+        <Image style={styles.avatar} source={img} />
+        <Text>{userName}</Text>
+      </View>
       <Text>{header}</Text>
       <Text>{shortText(text)}</Text>
       <Text>{date}</Text>
-      <Icon name="like" size={20} color="red">
+      <Icon name="like" size={10} color="red">
         <Text>{like}</Text>
       </Icon>
-      <Icon name="dislike" size={20} color="grey">
+      <Icon name="dislike" size={10} color="grey">
         <Text>{dislike}</Text>
       </Icon>
     </TouchableOpacity>
@@ -54,8 +53,8 @@ const userBlock = ({
 
 const styles = StyleSheet.create({
   container: {
-    width: '80%',
-    height: 50,
+    width: '95%',
+    height: 100,
     borderRadius: 10,
     borderWidth: 1,
     borderColor: 'grey',
@@ -65,6 +64,10 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
   },
+  top: {
+    flex: 2,
+
+  }
 });
 
-export default userBlock;
+export default UserBlock;
