@@ -8,18 +8,22 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
-  const onCheckWeatherPress = () => navigation.navigate('UsersScreen');
+  const onCheckWeatherPress = () => navigation.navigate('Users');
   return (
     <View style={styles.homeView}>
       <Text style={styles.homeText}>Weather App</Text>
       <View style={styles.buttonBlock}>
         <MainButton
           icon={<Icon name="arrow-forward" size={20} color="white" />}
-          onPress={onCheckWeatherPress}
+          onPress={() => {}}
           title="Go to check Weather"
           color="lightblue"
         />
-        <MainButton onPress={() => {}} title="Go to users" color="lightblue" />
+        <MainButton
+          onPress={onCheckWeatherPress}
+          title="Go to users"
+          color="lightblue"
+        />
       </View>
     </View>
   );

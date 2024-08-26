@@ -1,5 +1,6 @@
 import React from 'react';
 import {Image, StyleSheet, TouchableOpacity, Text} from 'react-native';
+import Icon from 'react-native-vector-icons/SimpleLineIcons';
 
 type UserBlockTypes = {
   img: string | undefined;
@@ -7,9 +8,23 @@ type UserBlockTypes = {
   header: string;
   text: string;
   date: string;
+  like: number;
+  dislike: number;
 };
 
-const userBlock = ({img, header, text, date, userName}: UserBlockTypes) => {
+const userBlock = ({
+  img,
+  header,
+  text,
+  date,
+  userName,
+  like,
+  dislike,
+}: UserBlockTypes) => {
+
+  const shortText = (textInput: string) => {
+   return textInput.length > 40 ? textInput.slice(0, 39) + '...' : textInput;
+  };
   const getImageSource = (imgSource: string | undefined) => {
     try {
       imgSource
@@ -25,8 +40,14 @@ const userBlock = ({img, header, text, date, userName}: UserBlockTypes) => {
       <Image style={styles.avatar} source={{uri: getImageSource(img)}} />
       <Text>{userName}</Text>
       <Text>{header}</Text>
-      <Text>{text}</Text>
+      <Text>{shortText(text)}</Text>
       <Text>{date}</Text>
+      <Icon name="like" size={20} color="red">
+        <Text>{like}</Text>
+      </Icon>
+      <Icon name="dislike" size={20} color="grey">
+        <Text>{dislike}</Text>
+      </Icon>
     </TouchableOpacity>
   );
 };

@@ -2,7 +2,7 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 type RootStackParamList = {
   Home: undefined;
-  UsersScreen: undefined;
+  Users: undefined;
   UserPost: { userId: string };
 };
 
