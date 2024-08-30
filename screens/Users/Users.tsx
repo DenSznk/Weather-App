@@ -27,7 +27,6 @@ const Users = () => {
     <ScrollView contentContainerStyle={styles.scrollViewContent}>
     {users.map((user: UsersProps) => {
       const imageSource = imageMap[user.image];
-      console.log(`Loading image for ${user.userName}:`, user.image);
       return (
         <UserBlock
           key={user.id}
