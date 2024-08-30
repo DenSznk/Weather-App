@@ -11,6 +11,25 @@ function HomeScreen() {
   const onUsersCPress = () => navigation.navigate('Users');
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
+  const springAnim = useRef(new Animated.Value(0)).current;
+
+  const startSprnganimation = () => {
+    Animated.spring(springAnim, {
+      toValue: 1,
+      friction: 2,
+      tension: 150,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const backSprnganimation = () => {
+    Animated.spring(springAnim, {
+      toValue: 0,
+      friction: 2,
+      tension: 150,
+      useNativeDriver: true,
+    }).start();
+  };
 
   const fadeIn = () => {
     Animated.timing(fadeAnim, {
@@ -29,9 +48,12 @@ function HomeScreen() {
   };
   return (
     <View style={styles.homeView}>
-      <Animated.View style={[{
-        opacity: fadeAnim,
-      }]}>
+      <Animated.View
+        style={[
+          {
+            opacity: fadeAnim,
+          },
+        ]}>
         <Text style={styles.homeText}>Weather App</Text>
       </Animated.View>
       <View style={styles.buttonBlock}>
@@ -48,7 +70,25 @@ function HomeScreen() {
         />
         <MainButton onPress={fadeIn} title="FadeIn" color="lightblue" />
         <MainButton onPress={fadeOut} title="FadeOut" color="lightblue" />
+        <MainButton onPress={startSprnganimation} title="SpringUp" color="lightblue" />
+        <MainButton onPress={backSprnganimation} title="SpringDown" color="lightblue" />
       </View>
+      <Animated.View
+        style={[
+          styles.animatedBox,
+          {
+            transform: [
+              {
+                translateY: springAnim.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0, -100],
+                }),
+              },
+            ],
+          },
+        ]}>
+                  <Text>123</Text>
+        </Animated.View>
     </View>
   );
 }
@@ -65,6 +105,15 @@ const styles = StyleSheet.create({
   buttonBlock: {
     marginTop: 20,
     gap: 10,
+  },
+  animatedBox: {
+    marginTop: 150,
+    width: 100,
+    height: 100,
+    backgroundColor: 'lightblue',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
   },
 });
 
