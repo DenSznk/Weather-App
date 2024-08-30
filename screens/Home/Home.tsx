@@ -4,29 +4,27 @@ import {Animated, StyleSheet, Text, View} from 'react-native';
 import MainButton from '../../components/Buttons/MainButton/MainButton';
 import {HomeScreenNavigationProp} from '../../types/navigationTypes';
 import {useNavigation} from '@react-navigation/native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
   const onUsersCPress = () => navigation.navigate('Users');
+  const toReanim = () => navigation.navigate('Reanim');
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const springAnim = useRef(new Animated.Value(0)).current;
 
-  const startSprnganimation = () => {
+  const startSpringAnimation = () => {
     Animated.spring(springAnim, {
       toValue: 1,
       friction: 2,
-      tension: 150,
       useNativeDriver: true,
     }).start();
   };
 
-  const backSprnganimation = () => {
+  const backSpringAnimation = () => {
     Animated.spring(springAnim, {
       toValue: 0,
-      friction: 2,
-      tension: 150,
       useNativeDriver: true,
     }).start();
   };
@@ -58,9 +56,9 @@ function HomeScreen() {
       </Animated.View>
       <View style={styles.buttonBlock}>
         <MainButton
-          icon={<Icon name="arrow-forward" size={20} color="white" />}
-          onPress={() => {}}
-          title="Go to check Weather"
+          icon={<Icon name="arrow-alt-circle-right" size={20} color="white" />}
+          onPress={toReanim}
+          title="Reanimated"
           color="lightblue"
         />
         <MainButton
@@ -70,8 +68,16 @@ function HomeScreen() {
         />
         <MainButton onPress={fadeIn} title="FadeIn" color="lightblue" />
         <MainButton onPress={fadeOut} title="FadeOut" color="lightblue" />
-        <MainButton onPress={startSprnganimation} title="SpringUp" color="lightblue" />
-        <MainButton onPress={backSprnganimation} title="SpringDown" color="lightblue" />
+        <MainButton
+          onPress={startSpringAnimation}
+          title="SpringUp"
+          color="lightblue"
+        />
+        <MainButton
+          onPress={backSpringAnimation}
+          title="SpringDown"
+          color="lightblue"
+        />
       </View>
       <Animated.View
         style={[
@@ -81,14 +87,14 @@ function HomeScreen() {
               {
                 translateY: springAnim.interpolate({
                   inputRange: [0, 1],
-                  outputRange: [0, -100],
+                  outputRange: [0, -1000],
                 }),
               },
             ],
           },
         ]}>
-                  <Text>123</Text>
-        </Animated.View>
+        <Text>123</Text>
+      </Animated.View>
     </View>
   );
 }

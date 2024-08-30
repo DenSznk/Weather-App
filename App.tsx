@@ -4,6 +4,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import HomeScreen from './screens/Home/Home';
 import Users from './screens/Users/Users';
+import Reanim from './screens/Reanim/Reanim';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ function App(): React.JSX.Element {
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Users" component={Users} />
+          <Stack.Screen name="Reanim" component={Reanim} />
         </Stack.Navigator>
       </NavigationContainer>
   );
