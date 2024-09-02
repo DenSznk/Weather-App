@@ -10,6 +10,7 @@ function HomeScreen() {
   const navigation = useNavigation<HomeScreenNavigationProp>();
   const onUsersCPress = () => navigation.navigate('Users');
   const toReanim = () => navigation.navigate('Reanim');
+  const toDragAndDrop = () => navigation.navigate('DragAndDrop');
 
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const springAnim = useRef(new Animated.Value(0)).current;
@@ -76,6 +77,11 @@ function HomeScreen() {
         <MainButton
           onPress={backSpringAnimation}
           title="SpringDown"
+          color="lightblue"
+        />
+        <MainButton
+          onPress={toDragAndDrop}
+          title="Drad and drop"
           color="lightblue"
         />
       </View>

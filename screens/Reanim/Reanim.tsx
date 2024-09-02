@@ -19,7 +19,7 @@ const Reanim = () => {
       borderRadius: progress.value * (SIZE / 10),
       transform: [
         {scale: scale.value},
-        {rotate: `${progress.value * 2 * Math.PI}rad}`},
+        {rotate: `${progress.value * 2 * Math.PI}rad`},
       ],
     };
   }, []);

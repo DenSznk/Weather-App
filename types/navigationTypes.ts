@@ -5,6 +5,7 @@ type RootStackParamList = {
   Users: undefined;
   UserPost: { userId: string };
   Reanim: undefined
+  DragAndDrop: undefined
 };
 
 export type HomeScreenNavigationProp = NativeStackNavigationProp<
